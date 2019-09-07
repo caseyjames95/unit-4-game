@@ -1,19 +1,49 @@
 
-// Arrays for target and gem values
-const targetValues = [35,37,38,43,46,49,50,51,54,55]
-const gemValues = [1,2,3,4,6,8,11]
+let goal = Math.floor(Math.random() * 100) + 50
+let current = 0
+let wins = 0
+let losses = 0
+const renderGems = () => {
+    current = 0
+    let goal = Math.floor(Math.random() * 100) + 50
+    document.getElementById('gems').innerHTML = ''
+    for(let i= 0; i < 4; i++) {
+        const random = Math.floor(Math.random() * 20) + 1
+        let gemElem = document.createElement("div")
+        gemElem.className = 'col s2'
+        gemElem.innerHTML = `
+        <div class="card">
+            <div class="card-image">
+                <img id="gemPic" src="./assets/images/gem${i + 1}.png" data-value="${random}">
+            </div>
+        </div>
+        `
 
-// Start and select values for target and gems
-const gameSelect = function () {
-    
+        document.getElementById('gems').append(gemElem)
+    }
+    document.getElementById('targetNumber').textContent = goal
+    document.getElementById('chosenNumber').textContent = current
+    document.getElementById('winCount').textContent = wins
+    document.getElementById('lossCount').textContent = losses
 }
 
-// Basic game variables
-let wins = 0
-let loss = 0
-let gemValue = []
-let green = 0
-let blue = 0
-let yellow = 0
-let res = 0
+document.addEventListener('click', event => {
+    if (event.target.className === 'gemElem') {
+        let gemValue = parseInt(event.target.dataset.value)
+        current += gemValue
+        console.log(gemValue)
+        if (current === goal) {
+            wins++
+            renderGems ()
+        } else if (current > goal) {
+            losses++
+            renderGems ()
+        } else {
+
+        }
+    }
+})
+
+
+renderGems()
 

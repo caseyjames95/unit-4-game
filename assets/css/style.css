@@ -16,13 +16,15 @@ h2 {
     width: 600px;
     height: 332px;
     background-color: rgb(79, 43, 27);
-    opacity: .7;
+    opacity: .8;
     padding: 20px;
     color: whitesmoke;
     font-size: 22px;
 }
 #target {
     margin: auto;
+    margin-top: -30px;
+    
     width: 600px;
     height: 100px;
     background-color: rgb(79, 43, 27);
@@ -30,6 +32,7 @@ h2 {
 }
 #number {
     margin: auto;
+    margin-top: -30px;
     width: 600px;
     height: 100px;
     background-color: rgb(79, 43, 27);
@@ -44,31 +47,21 @@ h2 {
 }
 #scoreboard {
     margin: auto;
+    margin-top: -30px;
     width: 600px;
     height: 150px;
     background-color: rgb(79, 43, 27);
-    opacity: .7;
+    opacity: .8;
+
 }
-#blueGem {
-    width: 100px;
-    height: 100px;
-    margin-top: 25px;
-    margin-right: 40px;
+#gems {
+    margin: auto;
 }
-#redGem {
-    width: 100px;
-    height: 100px;
-    margin-top: 25px;
-    margin-right: 40px;
+
+.numberss {
+    color: whitesmoke;
+    font-size: 40px;
 }
-#greenGem {
-    width: 100px;
-    height: 100px;
-    margin-top: 25px;
-    margin-right: 40px;
-}
-#yellowGem {
-    width: 100px;
-    height: 100px;
-    margin-top: 25px;
+#win {
+    
 }

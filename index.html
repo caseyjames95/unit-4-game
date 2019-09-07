@@ -4,67 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Link CSS -->
+    <!-- Link Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Linking my CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body background="./assets/images/wowGemBackground.jpg">
     <!-- World of Warcraft Gem Collector -->
     <!-- Layout -->
-    <!-- Title -->
-    <h1>Gem Collector</h1>
+    <div class="container"></div>
+        <!-- Title -->
+        <div class="row">
+        <h1>Gem Collector</h1>
+        </div>
+        <!-- Instructions -->
+        <div id="instructions" class="row">
+            <p>
+                You will be given a random number at the start of the game.
+            </p>
+            <br>
+            <p>
+                There are four gems below. By clicking on a gem you will add a specific amount of points to your total score.
+            </p>
+            <br>
+            <p>
+                You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+            </p>
+            <br>
+            <p>
+                The value of each gem is hidden from you until you click on it.
+            </p>
+            <br>
+            <p>
+                Each time when the game starts, the game will change values of each gem.
+            </p>
+        </div>
 
-    <!-- Instructions -->
-    <div id="instructions">
-        <p>
-            You will be given a random number at the start of the game.
-        </p>
-        <br>
-        <p>
-            There are four gems below. By clicking on a gem you will add a specific amount of points to your total score.
-        </p>
-        <br>
-        <p>
-            You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
-        </p>
-        <br>
-        <p>
-            The value of each gem is hidden from you until you click on it.
-        </p>
-        <br>
-        <p>
-            Each time when the game starts, the game will change values of each gem.
-        </p>
-    </div>
+        <!-- Target -->
+        <div id="target" class="row">
+            <h2>Target</h2>
+            <p id="targetNumber" class="numberss"><span>0</span></p>
+        </div>
 
-    <!-- Target -->
-    <div id="target">
-        <h2>Target</h2>
-        <p id="targetNumber"></p>
-    </div>
+        <!-- Your number -->
+        <div id="number"class="row">
+            <h2>Your Number</h2>
+            <p id="chosenNumber" class="numberss"><span>0</span></p>
+        </div>
 
-    <!-- Your number -->
-    <div id="number">
-        <h2>Your Number</h2>
-        <p id="chosenNumber"></p>
-    </div>
+        <!-- Gems -->
+        <div id="gems" class="row"></div>
 
-    <!-- Gems -->
-    <div id="gems">
-        <!-- Change div to img w/ id of gemColor -->
-        <img id="blueGem" src="./assets/images/blueGem.png">
-        <img id="redGem" src="./assets/images/redGem.png">
-        <img id="greenGem" src="./assets/images/greenGem.png">
-        <img id="yellowGem" src="./assets/images/yellowGem.png">
-    </div>
+        <!-- Win/Loss -->
+        <div id="scoreboard" class="row">
+            <div id="win">
+                <h2>Wins: <span id="winCount"class="numberss">0</span></h2>
 
-    <!-- Win/Loss -->
-    <div id="scoreboard">
-        <h2>Score!</h2>
-        <div id="winCount"></div>
-        <div id="lossCount"></div>
-    </div>
+            </div>
+            <div id="loss"></div>
+                <h2>Losses: <span id="lossCount"class="numberss">0</span></h2>
+        </div>
 
+
+    <!-- Materialize Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Link Javascript -->
     <script src="./assets/javascript/game.js"></script>
 </body>
