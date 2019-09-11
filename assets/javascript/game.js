@@ -5,7 +5,6 @@ let wins = 0
 let losses = 0
 const renderGems = () => {
     current = 0
-    let goal = Math.floor(Math.random() * 100) + 50
     document.getElementById('gems').innerHTML = ''
     for(let i= 0; i < 4; i++) {
         const random = Math.floor(Math.random() * 20) + 1
@@ -14,7 +13,7 @@ const renderGems = () => {
         gemElem.innerHTML = `
         <div class="card">
             <div class="card-image">
-                <img id="gemPic" src="./assets/images/gem${i + 1}.png" data-value="${random}">
+                <img id="gemPic" src="./assets/images/gem${i + 1}.png" class="gemElem" data-value="${random}">
             </div>
         </div>
         `
@@ -42,6 +41,7 @@ document.addEventListener('click', event => {
 
         }
     }
+    document.getElementById('chosenNumber').textContent = current
 })
 
 
