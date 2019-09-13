@@ -34,9 +34,11 @@ document.addEventListener('click', event => {
         if (current === goal) {
             wins++
             renderGems ()
+            
         } else if (current > goal) {
             losses++
             renderGems ()
+            
         } else {
 
         }
