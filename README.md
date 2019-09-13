@@ -1,6 +1,6 @@
 # Gem Collector Game
 ## Created by Casey Purves
-### [Github](https://github.com/caseyjames95) | [LinkedIn](https://www.linkedin.com/in/caseypurves/) | [Pages](https://caseyjames95.github.io/Word-Guess-Game/)
+### [Github](https://github.com/caseyjames95) | [LinkedIn](https://www.linkedin.com/in/caseypurves/) | [Pages](https://caseyjames95.github.io/unit-4-game/)
 Made using HTML, CSS and JavaScript.
 
 
